@@ -18,7 +18,7 @@ header {
   justify-content: space-around;
   padding-top:5%;
   padding-bottom: 0%;
-  background-image: url(/../imagenes/pacman.png);
+  background-image: url(imagenes/pacman.png);
   background-color: rgb(43, 226, 220);
 }
 
