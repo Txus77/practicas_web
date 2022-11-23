@@ -19,7 +19,7 @@ header {
   padding-top:5%;
   padding-bottom: 0%;
   background-color: rgb(43, 226, 220);
-  background-image: url(../imagenes/pacman.png);
+  background-image: url(/../imagenes/pacman.png);
 }
 
 .titulo {
