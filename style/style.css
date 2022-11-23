@@ -9,9 +9,7 @@ html {
   border-style: inset;
   height: 10%;
 }
-body {
-  background-color: aquamarine;
-}
+
 header {
   display: flex;
   flex-direction: column;
@@ -19,7 +17,7 @@ header {
   padding-top:5%;
   padding-bottom: 0%;
   background-image: url('../imagenes/pacman.png');
-  
+  background-color: rgb(43, 226, 220);
 }
 
 .titulo {
