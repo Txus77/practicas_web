@@ -1,0 +1,303 @@
+/*
+  Autor: Jesús Diego Rivero
+  Asignatura: LMGSI
+  Unidad: UD 2
+  Tarea: Tarea evaluativa 1 - Sitio WEB
+  Hoja de estilos de la pagina web.
+*/
+
+/*Defino tamaño letra cogiendo como refernecia el que está por defecto*/
+html {
+  font-size: 1rem;
+}
+/*
+  fijo el logo de la empresa para que se vea de forma continua
+  independientemente de donde este en la pagina
+*/
+#logo-empresa {
+  position: fixed;
+  top: 2%;
+  left:2%;
+  border-color:gold;
+  border-style: inset;
+  height: 10%;
+}
+/*Establezco un fondo por defecto para el body*/
+body {
+  background-color: aquamarine;
+}
+/*
+  Defino estilo cabecera que se repite en 4 de las paginas
+  Establezco disposición flex ya que en la cabecer van tanto 
+  el título de cada página como la barra de navegación
+*/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top:5%;
+  padding-bottom: 0%;
+  background-image: url(../imagenes/pacman.png);
+  background-color: rgb(43, 226, 220);
+}
+/*Defino estilo de los titulos prinicpales de las paginas*/
+.titulo {
+  margin:0 auto;
+  padding: 16px; 
+  width: 70%;
+  font-family: 'Press Start 2P';
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+/*Defino un estilo de texto 3D para poder aplicralo al texto que me interese*/
+.efecto3d {
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191,
+    1px 7px 1px #919191,
+    1px 8px 1px #919191,
+    1px 9px 1px #919191,
+    1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+/*
+Defino estilo de la barra de navegación y para situar los enlaces lo hago
+ también con flex
+*/
+nav {
+  height: 20%;
+  margin: 90px auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/*Defino los estilos de los enlaces dando al texto algo de sombra*/
+nav > a {
+  margin:0px;
+  padding:5px;
+  border: 20px outset rgb(98, 95, 95) ;
+  font-size:2rem;
+  font-weight:bold;
+  text-decoration: none;
+  color: rgb(199, 210, 122);
+  text-shadow:1px 2px 1px rgba(16,16,16,0.2),
+    1px 3px 2px rgba(16,16,16,0.3),
+    1px 4px 3px rgba(16,16,16,0.4),
+    1px 5px 4px rgba(13, 13, 13, 0.5);
+  background-color: rgb(126, 121, 121);
+}
+/*Clase establecida para que se distinga el enlace en el que te hallas*/
+.active{
+  background-color: rgb(147, 150, 60);
+}
+/*
+ Defino unas condiciones básicas que comparten los main de las diferentes 
+ páginas que son básicamente la situción de los items de su interior
+*/
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/*Establezco estilo para todos los h2 de todas las paginas*/
+h2 {
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: bolder;
+  font-family: 'Press Start 2P';
+  text-transform: uppercase;
+  text-align: center;
+}
+/*Defino estilo de la tabla en cuanto a tamaño , color y borde*/
+table {
+  margin:0 auto;
+  max-width: 100%;
+  background-color: rgb(196, 196, 220);
+  border-style: ridge;
+  border-width: 10px;
+  border-spacing: 0px;
+}
+/*A partir de aqui establezco estilos de fuente, texto y separaciones de filas y columnas*/
+tr {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+th, td {
+  margin:0;
+  padding: 10px;
+  font-family: 'Press Start 2P';
+  border-style:inset;
+  text-align: center;
+}
+
+th {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+td {
+  font-size: 1.25rem;
+}
+/*Se definen los estilos de fuente y alineación de los h3 y h4*/
+h3, h4 {
+  font-family: 'Press Start 2P';
+  font-size: 1.25rem;
+  color: rgb(168, 69, 69);
+  text-align: center;
+}
+/*
+  Indico tamaño y situación de las imagenes que quiero que floten para que las rodee 
+  un texto
+*/
+.imagen_flotante {
+  float:right;
+  border:solid white;
+  max-width: 80%;
+}
+/*Clase para retomar el flujo tras un float*/
+.clearall {
+  clear:both;
+}
+/*
+ Estilos de los pies de pagina que se repiten en las diferentes paginas
+ Defino  colocación de items y estilos de la fuente
+*/
+footer {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(45, 45, 62);
+  background: linear-gradient(to top, rgb(47, 47, 50), white);
+}
+.pie-pagina{
+  margin-left:20px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(253, 252, 252);
+} 
+/*
+  Estabelzco estilos de como se ubica los items del interior en los aside
+  asi como como se su tamaño y capaciodad de reducción e incremento
+*/
+aside {
+  height: 1000px;
+  flex:1 1 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(102, 102, 104);
+}
+/*clase para dar a los contenedores un aaspecto 3D*/
+.efecto3Dcaja {
+  color: #f5f5f5;
+  box-shadow: 1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191,
+    1px 7px 1px #919191,
+    1px 8px 1px #919191,
+    1px 9px 1px #919191,
+    1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+/*Las siguientes subclases establecen un color a los enlaces en función de su estado*/
+a:link {
+  color:rgb(40, 53, 40);
+  text-decoration: none;
+}
+a:visited {
+  color:rgb(84, 76, 101);
+}
+a:hover {
+  color:rgb(255, 187, 0)
+}
+a:active {
+  color:black;
+}
+/*
+ Clase para fijar posición, color y disposición de los botones que permiten ir a 
+ otra página o subir en la pagina del juego.
+ Cabe la posibilidad de implementarlos en otras paginas
+*/
+.botones-salir {
+  position: fixed;
+  bottom: 0%;
+  right:50%;
+  display: inline-flex;
+  font-size: 2rem;
+  background-color: darkgoldenrod; 
+}
+/*Clase que define el borde de cada boton*/
+.boton {
+  border-width: 10px;
+  border-color: #919191;
+  border-style: outset;
+}
+/*Estilos de formulario para ubicar los input y familia de fuente*/
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Dancing Script';
+  justify-content: space-around;
+}
+/*estilos para alinear los elementos del formulario*/
+.alineacion {
+  flex: 1 1;
+  margin: 5px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Dancing Script';
+}
+/*Defino característics generales de las etiquetas de formulario*/
+label {
+  font-size: 3rem;
+  font-weight: bold;
+}
+/*
+  Define estilos de la caja donde se puede elegir la ficha a visionar.
+  Defino posición avsoluta porque quiero que este en todas las paginas
+*/
+#juego-analizado {
+  position:absolute;
+  top: 15%;
+  left:1%;
+  font-size: 2rem;
+  color: gold;
+}
+#juego-analizado p {
+  border-style: outset;
+  border-width: 6px;
+  background-color: rgb(29, 70, 40);
+}
+/*
+Hago que el enlace no se vea hasta que sitúo el raton encima de la
+ caja donde me inidca la opcion
+*/
+#juego-analizado p a {
+  display: none;
+}
+#juego-analizado p:hover a{
+  display: block;
+
+}
+/*Cambio el color del enlace una vez visitado para que se distinga*/
+#juego-analizado p a:visited {
+  color:rgb(148, 123, 227);
+}
