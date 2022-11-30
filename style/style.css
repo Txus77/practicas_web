@@ -224,11 +224,11 @@ aside {
 }
 /*Las siguientes subclases establecen un color a los enlaces en función de su estado*/
 a:link {
-  color:rgb(40, 53, 40);
+  color:rgb(37, 216, 37);
   text-decoration: none;
 }
 a:visited {
-  color:rgb(84, 76, 101);
+  color:rgb(84, 39, 181);
 }
 a:hover {
   color:rgb(255, 187, 0)
