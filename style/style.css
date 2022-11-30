@@ -138,7 +138,8 @@ th, td {
   padding: 10px;
   font-family: 'Press Start 2P';
   border-style:inset;
-  text-align: center;
+  text-align:left;
+  line-height: 2rem;  
 }
 
 th {
@@ -155,6 +156,11 @@ h3, h4 {
   font-size: 1.25rem;
   color: rgb(168, 69, 69);
   text-align: center;
+}
+/*Cuando paso el raton por cada icono se hace más grande y se decolora*/
+.icono:hover {
+  transform: scale(1.5);
+  filter: sepia(80%);
 }
 /*
   Indico tamaño y situación de las imagenes que quiero que floten para que las rodee 
