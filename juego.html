@@ -28,7 +28,7 @@
     */
     header {
       height:260px;
-      background-image: url(imagenes/cabecera_fallout.png);
+      background-image: url(imagenes/juegos/cabecera_fallout.png);
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -68,12 +68,42 @@
       border-width: 10px;
       border-radius: 20px;
     } 
+     /*
+      Creo un efecto con las reglas que siguen para hacer que aparezca un enlace
+      del video presentación al desvanecerse la imagen
+    */
+    /*
+      Hago la posicion del contendor relativa para poder luego 
+      situar el enlace
+    */
+    .cortina:hover {
+      position: relative;
+    }
+    /*
+     Mantengo el enlace oculto y con posicion absoluta para que ocupe 
+     la misma posicion que la imagen
+    */
+    #objeto-oculto {
+      position:absolute;
+      top: 15rem;
+      right: 20rem;
+      visibility:hidden;
+    }
+    /*Al pasar el raton la imagen se vuelve transparente*/
+    .cortina:hover > img {
+      filter: opacity(.1);
+    }
+    .cortina:hover > #objeto-oculto {
+      visibility: visible;
+      font-family: "Dancing Script";
+      transform: scale(4);
+    }
   </style>
 </head>
 <body>
   <!--Cabecera difernete excepto el logo que es igual en todas las paginas-->
   <header id="superior">
-    <img id="logo-empresa" src="imagenes/icono.png" alt="logo empresa">
+    <img id="logo-empresa" src="imagenes/iconos/icono.png" alt="logo empresa">
     <h1 class="titulo efecto3d">Ficha del juego fallout 3</h1>
   </header>
   <!--
@@ -108,9 +138,13 @@
       </article>
     </aside>
     <!--parte principal de la pagina-->
-    <section>
-     <h2 class = "efecto3d">Descripción del juego</h2>
-     <img class="imagen_flotante" src="imagenes/fallout.png" alt="imagen fallout">
+    <section style="position:relative;">
+      <h2 class="efecto3d">Descripción del juego</h2>
+      <!--englobo en un contenedor la imagen y el enlace que quiero que aprezca debajo-->
+      <figure class="imagen_flotante cortina">
+        <img  src="imagenes/juegos/fallout.png" alt="imagen fallout">
+        <div id="objeto-oculto"><a href="https://www.youtube.com/watch?v=50ap6C-AGD8">VIDEO PRESENTACION</a></div>
+      </figure>
       <p class="descripcion-juego">
         Fallout 3 es un vídeojuego de rol con carácter post-apocalíptico tanto 
         para consolas como para ordenador. Ha sido desarrollado y publicado por 
