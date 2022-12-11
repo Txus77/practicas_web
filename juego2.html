@@ -1,0 +1,224 @@
+<!--
+  Autor: Jesús Diego Rivero
+  Asignatura: LMGSI
+  Unidad: UD 2
+  Tarea: Tarea evaluativa 1 - Sitio WEB
+  Pagina web Ficha de juego.
+-->
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="videojuegos, análisis, valoracion, usuarios">
+  <meta name="description" content="Recomendaciones de videojuegos, de jugadores para jugadores">
+  <!--establezco enlaces para poder usar fuentes de letra que se adapten mejor al estilo que  quiero-->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  <!--enlace con la hja de estilo para normalizar los estilos-->
+  <link rel="stylesheet" type="text/css" href="style/normalize.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <title>Ficha juego</title>
+  <!--Establezco los estilos particulares de esta página web-->
+  <style>
+    /*
+     La cabecera de esta pagina es diferente por lo que como fondo
+     pongo imagen representativa del juego a evaluar
+    */
+    header {
+      height:260px;
+      background-image: url(imagenes/juegos/fondodying.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    h3 {
+      color: rgb(3, 36, 97);
+    }
+    /*Pongo un tamaño relativo para que se adapte a la pantalla*/
+    section {
+      width:50%;
+      padding: 2%;
+    }
+    aside {
+      height: auto;
+    }
+    /*
+      Estos lementos se diponen en un contenedor de forma flex y a su vez sus items 
+      también tienen esa disposición
+    */
+    article{
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 1%;
+      align-items: center;   
+      font-size: 2rem;
+    }
+    /*Defino estilo para la fuente especifica de la descripcion del juego*/
+    .descripcion-juego {
+      width: 90%; 
+      font-family:'Press Start 2P';
+      color:rgb(76, 69, 59);
+      font-weight: lighter;
+      font-style:italic;
+      font-size: 1rem;
+      line-height: 1.75rem;
+      border-width: 10px;
+      border-radius: 20px;
+    } 
+    /*
+      Creo un efecto con las reglas que siguen para hacer que aparezca un enlace
+      del video presentación al desvanecerse la imagen
+    */
+    /*
+      Hago la posicion del contendor relativa para poder luego 
+      situar el enlace
+    */
+    .cortina:hover {
+      position: relative;
+    }
+    /*
+     Mantengo el enlace oculto y con posicion absoluta para que ocupe 
+     la misma posicion que la imagen
+    */
+    #objeto-oculto {
+      position:absolute;
+      top: 4rem;
+      right: 7rem;
+      visibility:hidden;
+      
+    }
+    /*Al pasar el raton la imagen se vuelve transparente*/
+    .cortina:hover > img {
+      filter: opacity(.1);
+    }
+    .cortina:hover > #objeto-oculto {
+      visibility: visible;
+      font-family: "Dancing Script";
+      transform: scale(2.5);
+    }
+  </style>
+</head>
+<body>
+  <!--Cabecera diferente excepto el logo que es igual en todas las paginas-->
+  <header id="superior">
+    <img id="logo-empresa" src="imagenes/iconos/icono.png" alt="logo empresa">
+    <h1 class="titulo efecto3d">Ficha del juego Dying Light</h1>
+  </header>
+  <!--
+    divido el main en 2 aside, en los extremos y un section en el centro
+    en los aside dipongo enlaces a difernetes sitios web relacionados y en el section evaluo el juego 
+    que es la parte principal
+  -->
+  <main>
+    <!--divido el aside en apartados con articles que diferencian los diferentes grupos de enlaces-->
+    <aside>
+      <article>
+        <!--Cada titulo define la temática de los enlaces que le siguen-->
+        <h2 class = "efecto3d">Enlaces a Guias del juego</h2>
+        <a class="efecto3d" href="https://www.eliteguias.com/guias/d/dl/dying-light.php">EliteGuias</a>
+        <a class="efecto3d" href="https://vandal.elespanol.com/guias/guia-dying-light-2-trucos-consejos-y-secretos">Vandal</a>
+        <a class="efecto3d" href="https://as.com/meristation/2015/02/09/guias/1423476060_141584.html">Meristation</a>
+        <a class="efecto3d" href="https://www.hobbyconsolas.com/videojuegos/dying-light">Hobbyconsolas</a>
+      </article>
+      <article>
+        <h2 class = "efecto3d">Donde conseguir el juego</h2>
+        <a class="efecto3d" href="https://www.instant-gaming.com/en/1296-buy-dying-light-the-following-enhanced-edition-enhanced-edition-pc-mac-game-steam/">instant-gaming</a>
+        <a class="efecto3d" href="https://store.steampowered.com/app/239140/Dying_Light/">Steam</a>
+        <a class="efecto3d" href="https://www.gog.com/en/game/dying_light_the_following_enhanced_edition">GOG</a>
+        <a class="efecto3d" href="https://www.xbox.com/es-ES/games/store/dying-light/BXN9LB6R3ZPG">XBOX</a>
+      </article>
+      <article>
+        <h2 class = "efecto3d">Enlaces a videos de gameplay, reseñas y más</h2>
+        <a class="efecto3d" href="https://www.youtube.com/watch?v=-0XXRAOYYSk">Telking Games</a>
+        <a class="efecto3d" href="https://www.youtube.com/watch?v=rqQinYRqiKg&list=PLI4TZXPwXLJr5M26C5P0X-3gFYvqxmggR">CristianCode85</a>
+        <a class="efecto3d" href="https://www.youtube.com/watch?v=6cQXcp9Qpw0">Tecnodroidizados</a>
+        <a class="efecto3d" href="https://www.youtube.com/watch?v=mb6Id2JwbBM">AlkaJugger</a>
+      </article>
+    </aside>
+    <!--parte principal de la pagina-->
+    <section style="position:relative;">
+      <h2 class="efecto3d">Descripción del juego</h2>
+      <!--englobo en un contenedor la imagen y el enlace que quiero que aprezca debajo-->
+      <figure class="imagen_flotante cortina">
+        <img  src="imagenes/juegos/fotodying.png" alt="imagen Dying Light">
+        <div id="objeto-oculto"><a href="https://www.youtube.com/watch?v=kLyDUwvufGc">VIDEO PRESENTACION</a></div>
+      </figure>
+      <p class="descripcion-juego">
+        Dying Light es un juego con un amplio y peligroso mundo abierto ubicado en la ciudad ficticia de Harran. 
+        Durante el día los jugadores podrán explorar un amplio ambiente urbano y expansivo contaminado por un insidioso virus, 
+        también podrán colocar las trampas y a su vez podrán buscar suministros en el día tanto como en la noche, 
+        salvar a los supervivientes encontrados casualmente y también buscar o crear armas. Los infectados son lentos, 
+        excepto algunos infectados específicos, dando la posibilidad al jugador de huir, pero su peligrosidad crece con los números. 
+        Por suerte, el jugador podrá quedarse en los techos de los edificios para ponerse fuera de peligro, pero también existen 
+        infectados llamados víricos, son los segundos más veloces después de coléricos, que salen a la noche. Los víricos aparecen 
+        casi siempre cuando escuchan un ruido fuerte, como un disparo, una explosión o un golpe fuerte, son muy rápidos y pueden 
+        escalar edificios perfectamente, haciendo que hasta uno de ellos sea una molestia para el jugador. Los jugadores deberán 
+        preparar las defensas contra la creciente población infectada en este nuevo mundo apocalíptico.
+      <h2 class = "efecto3d">valoracion del juego</h2>
+      <h3>Trama</h3>
+      <p class="descripcion-juego">La trama argumental de Dying Light nos sitúa en la ciudad de Harran, 
+        que está asolada debido a un virus que ha mutado prácticamente a toda la población. Tomamos el rol de Kyle Crane, 
+        un miembro de la organización SAI, que aparentemente envía ayudas periódicamente a los habitantes vivos del lugar, 
+        aunque reina cierta confusión sobre si hay alguien sin el cerebro hecho trizas. Tras un aterrizaje forzoso, 
+        acabamos en un lugar llamado La Torre. Ahí, un pequeño grupo de supervivientes trata de hacerse con los suministros, 
+        pero para hacerse con ellos no solo hay que hacer frente a los muertos vivientes, sino a un grupo de bandidos comandado 
+        por el archienemigo de turno.
+      </p>
+      <h3>Graficos</h3>
+      <p class="descripcion-juego">Los gráficos de este juego aunque no son malos se nota el paso del tiempo. Los pasiajes
+        son muy chulos y la ciudad esta bien. Sin embargo, cuando entras al detalle te das cuanta que las casas se repiten al igual 
+        que los zombies. No destaca especialmente en este apartado.
+      </p>
+      <h3>Jugabilidad</h3>
+      <p class="descripcion-juego">La jugabilidad no es mala. El parkour que se realiza para trasladarse por la ciudad es bastante 
+        divertido. Además, el que el juego no sea excesivamente fácil lo hace bastante interesante ya que en cada muerte te quitan 
+        experiencia. Sin embargo, las misiones secundarias se hacen bastante anodinas y al final se tiene la sensación de estar haciendo
+        siempre lo mismo. La misión pricipal no está mal aunque tampoco es fabulosa.
+      </p>
+      <h3>Conclusion</h3>
+      <p class="descripcion-juego">Dying Light no es un mal juego. Te puede dar horas y horas de diversión aunque hay momentos 
+        en el que se hace bastante repetitivo. Las incursiones que se hacen por la nocehe suben bastante la adrenalina.
+        Le doy al juego un 8.
+      </p>
+    </section>
+    <!--divido el aside en apartados con articles que diferencian los diferentes grupos de enlaces-->
+    <aside>
+      <article>
+        <h2 class = "efecto3d">Reviews de Dying Light en otras webs</h2>
+        <a class="efecto3d" href="https://www.hobbyconsolas.com/reviews/analisis-dying-light-para-ps4-108430">Hobbyconsolas</a>
+        <a class="efecto3d" href="https://as.com/meristation/juegos/dying_light/">Meristation</a>
+        <a class="efecto3d" href="https://www.levelup.com/PC/juegos/47730/Dying-Light/review">LevelUp</a>
+        <a class="efecto3d" href="https://es.ign.com/dying-light/90711/review/dying-light-analisis-para-ps4-xbox-one-y-pc">IGN</a>
+      </article>
+      <!--
+        En esta parte introduzco un formulario que forma parte del aside para que los
+        usuarios puedan enviar analisis del juego
+      -->
+      <article>
+        <h2 class = "efecto3d">Envianos tu opinion sobre el juego</h2>
+        <form action="jdiego@birt.eus" method="post">
+          <div class="alineacion"> 
+            <label  for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" value="Introduce el nombre">
+          </div> 
+          <div class="alineacion">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" value="Introduce el email">
+          </div>
+            <label for="texto">Opinion sobre el juego</label>
+            <textarea name="Opinion" id="texto" cols="30" rows="20">Escribe aquí tu opinion sobre el juego</textarea>
+            <input type="submit" value="Enviar">
+        </form>
+      </article>
+    </aside>
+  </main> 
+  <!--defino unos botones para poder salir de esta pagina o ir a la parte superior de la misma--> 
+  <div class="botones-salir">
+    <a class="boton" href="index.html">Inicio</a>
+    <a class="boton" href="#superior">subir</a>
+  </div>
+</body>
+</html>
