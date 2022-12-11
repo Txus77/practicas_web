@@ -4,7 +4,7 @@
         <title>Casa Gamer</title>
         <link>https://txus77.github.io/practicas_web/</link>
         <description>Weblog de analisis de videojuegos</description>
-        <atom:link href="https://github.com/Txus77/practicas_web/docrss.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://github.com/Txus77/practicas_web/blob/main/docrss.xml" rel="self" type="application/rss+xml"/>
         <language>es</language>
         <copyright>Copyright 2022</copyright>
         <lastBuildDate>Sun, 11 Dec 2022 09:00:00 +0100</lastBuildDate>
