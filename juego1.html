@@ -1,0 +1,224 @@
+<!--
+  Autor: Jesús Diego Rivero
+  Asignatura: LMGSI
+  Unidad: UD 2
+  Tarea: Tarea evaluativa 1 - Sitio WEB
+  Pagina web Ficha de juego.
+-->
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="videojuegos, análisis, valoracion, usuarios">
+  <meta name="description" content="Recomendaciones de videojuegos, de jugadores para jugadores">
+  <!--establezco enlaces para poder usar fuentes de letra que se adapten mejor al estilo que  quiero-->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  <!--enlace con la hja de estilo para normalizar los estilos-->
+  <link rel="stylesheet" type="text/css" href="style/normalize.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <title>Ficha juego</title>
+  <!--Establezco los estilos particulares de esta página web-->
+  <style>
+    /*
+     La cabecera de esta pagina es diferente por lo que como fondo
+     pongo imagen representativa del juego a evaluar
+    */
+    header {
+      height:260px;
+      background-image: url(imagenes/juegos/like_dragon.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    h3 {
+      color: rgb(3, 36, 97);
+    }
+    /*Pongo un tamaño relativo para que se adapte a la pantalla*/
+    section {
+      width:50%;
+      padding: 2%;
+    }
+    aside {
+      height: auto;
+    }
+    /*
+      Estos lementos se diponen en un contenedor de forma flex y a su vez sus items 
+      también tienen esa disposición
+    */
+    article{
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 1%;
+      align-items: center;   
+      font-size: 2rem;
+    }
+    /*Defino estilo para la fuente especifica de la descripcion del juego*/
+    .descripcion-juego {
+      width: 90%; 
+      font-family:'Press Start 2P';
+      color:rgb(76, 69, 59);
+      font-weight: lighter;
+      font-style:italic;
+      font-size: 1rem;
+      line-height: 1.75rem;
+      border-width: 10px;
+      border-radius: 20px;
+    } 
+    /*
+      Creo un efecto con las reglas que siguen para hacer que aparezca un enlace
+      del video presentación al desvanecerse la imagen
+    */
+    /*
+      Hago la posicion del contendor relativa para poder luego 
+      situar el enlace
+    */
+    .cortina:hover {
+      position: relative;
+    }
+    /*
+     Mantengo el enlace oculto y con posicion absoluta para que ocupe 
+     la misma posicion que la imagen
+    */
+    #objeto-oculto {
+      position:absolute;
+      top: 4rem;
+      right: 7rem;
+      visibility:hidden;
+      
+    }
+    /*Al pasar el raton la imagen se vuelve transparente*/
+    .cortina:hover > img {
+      filter: opacity(.1);
+    }
+    .cortina:hover > #objeto-oculto {
+      visibility: visible;
+      font-family: "Dancing Script";
+      transform: scale(2.5);
+    }
+  </style>
+</head>
+<body>
+  <!--Cabecera difernete excepto el logo que es igual en todas las paginas-->
+  <header id="superior">
+    <img id="logo-empresa" src="imagenes/iconos/icono.png" alt="logo empresa">
+    <h1 class="titulo efecto3d">Ficha del juego Yakuza Like a Dragon</h1>
+  </header>
+  <!--
+    divido el main en 2 aside, en los extremos y un section en el centro
+    en los aside dipongo enlaces a difernetes sitios web relacionados y en el section evaluo el juego 
+    que es la parte principal
+  -->
+  <main>
+    <!--divido el aside en apartados con articles que diferencian los diferentes grupos de enlaces-->
+    <aside>
+      <article>
+        <!--Cada titulo define la temática de los enlaces que le siguen-->
+        <h2 class = "efecto3d">Enlaces a Guias del juego</h2>
+        <a class="efecto3d" href="https://www.eliteguias.com/guias/y/yld/yakuza-like-a-dragon.php">EliteGuias</a>
+        <a class="efecto3d" href="https://www.chicasgamers.com/2022/08/guia-yakuza-like-dragon-para-completar-juego.html">Cosas de Chicas Gamer</a>
+        <a class="efecto3d" href="https://alfabetajuega.com/guia/guia-de-yakuza-like-a-dragon-todos-los-trucos-secretos-y-consejos">Alfa Beta</a>
+        <a class="efecto3d" href="https://savegameblog.com/2021/12/07/guia-y-consejos-para-completar-de-forma-sencilla-y-sin-farmear-yakuza-like-a-dragon/">Save Game</a>
+      </article>
+      <article>
+        <h2 class = "efecto3d">Donde conseguir el juego</h2>
+        <a class="efecto3d" href="https://www.instant-gaming.com/en/6878-buy-yakuza-like-a-dragon-pc-mac-game-steam-europe/">instant-gaming</a>
+        <a class="efecto3d" href="https://store.steampowered.com/app/1235140/Yakuza_Like_a_Dragon/">Steam</a>
+        <a class="efecto3d" href="https://www.gog.com/wishlist/movies/yakuza_like_a_dragon_1">GOG</a>
+        <a class="efecto3d" href="https://www.xbox.com/es-ES/games/store/yakuza-like-a-dragon/9nxcswcqtnfg">XBOX</a>
+      </article>
+      <article>
+        <h2 class = "efecto3d">Enlaces a videos de gameplay, reseñas y más</h2>
+        <a class="efecto3d" href="https://www.youtube.com/watch?v=B6P4Xx172Sg">Vandal</a>
+        <a class="efecto3d" href="https://www.youtube.com/watch?v=V1qjO5jl74g">Alexelcapo</a>
+        <a class="efecto3d" href="https://www.youtube.com/watch?v=r0dj7ATG6G0">LOkOHGaming</a>
+        <a class="efecto3d" href="https://www.youtube.com/watch?v=hjHF8TYZ9E0">Hobby Consolas</a>
+      </article>
+    </aside>
+    <!--parte principal de la pagina-->
+    <section style="position:relative;">
+      <h2 class="efecto3d">Descripción del juego</h2>
+      <!--englobo en un contenedor la imagen y el enlace que quiero que aprezca debajo-->
+      <figure class="imagen_flotante cortina">
+        <img  src="imagenes/juegos/yakuza_foto.png" alt="imagen Yakuza_Like_a_Dragon">
+        <div id="objeto-oculto"><a href="https://www.youtube.com/watch?v=2Q2Q6XQCpWc">VIDEO PRESENTACION</a></div>
+      </figure>
+      <p class="descripcion-juego">
+        Yakuza: Like a Dragon prescinde del tradicional modo de beat them up de la saga para adentrarse 
+        en un sistema tradicional de RPG de combate por turnos. Usando el clásico menú de ataque, 
+        habilidades, guardia y objetos, el jugador elige la acción de un personaje antes de pasar al siguiente.
+        El orden de la ronda va en función de la iniciativa de cada personaje, de forma que suelen alternarse 
+        los ataques de diferentes enemigos y de los personajes. Cada personaje tiene una vida y una barra de 
+        puntos de magia que usará para sus diferentes habilidades. Estas harán diferentes acciones y daño, 
+        dependiendo del número de puntos de magia que cueste. Además estas acciones se pueden mejorar al 
+        ejecutarlas mediante un sencillo sistema de quick time events. Los jugadores también pueden ejecutar 
+        habilidades especiales de grupo que varían según los atributos de Ichiban.
+      </p>
+      <h2 class = "efecto3d">valoracion del juego</h2>
+      <h3>Trama</h3>
+      <p class="descripcion-juego">Ichiban Kasuga, un yakuza de una familia de bajo rango de Tokio, 
+        se enfrenta a una pena de cárcel de 18 años por asumir la culpa de un delito que no cometió. 
+        Sin perder la esperanza, cumple su condena. Cuando sale de la cárcel, descubre que nadie lo 
+        está esperando y que el hombre al que más respetaba ha destruido su clan.
+        Ichiban se propone descubrir la verdad tras la traición de su familia y recuperar su vida, 
+        rodeándose para ello de un grupo diverso de parias sociales: Adachi, un policía rebelde, Nanba, 
+        un exenfermero vagabundo, y Saeko, una hostess con una misión. Juntos, se verán envueltos en 
+        un conflicto que se cuece bajo la superficie de Yokohama, y deberán convertirse en los héroes 
+        que nunca esperaron ser.
+      </p>
+      <h3>Graficos</h3>
+      <p class="descripcion-juego">Apartado artistico más que notable con el carcteristico estilo
+        de todos los juegos de Yakuza. Escenarios muy coloridos y graficos bastante pulidos con un 
+        diseño de personajes notable. La ciudad es para enmarcar con un nivel de detalle impresionante.
+      </p>
+      <h3>Jugabilidad</h3>
+      <p class="descripcion-juego">Jugabilidad muy buena. Los combates son por turnos. Abundantes y
+        divertidos minijuegos que hacen que el juego sea aún más divertido de lo que ya es.
+      </p>
+      <h3>Conclusion</h3>
+      <p class="descripcion-juego">Yakuza Like a Dragon es un juegazo. Con una trama muy buena, una jugabilidad
+        sobresaliente y muy divertido con toda una ciudad que explorar.
+        La nota que se le condede es de un 9.5
+      </p>
+    </section>
+    <!--divido el aside en apartados con articles que diferencian los diferentes grupos de enlaces-->
+    <aside>
+      <article>
+        <h2 class = "efecto3d">Reviews de Yakuza Like a Dragon en otras webs</h2>
+        <a class="efecto3d" href="https://vandal.elespanol.com/analisis/ps4/yakuza-like-a-dragon/51619#p-73">Vandal</a>
+        <a class="efecto3d" href="https://as.com/meristation/juegos/yakuza_7/">Meristation</a>
+        <a class="efecto3d" href="https://www.hobbyconsolas.com/reviews/analisis-yakuza-dragon-xbox-one-series-x-s-ps4-pc-748337">Hobbyconsolas</a>
+        <a class="efecto3d" href="https://es.ign.com/yakuza-like-a-dragon-xbox-one/168400/review/analisis-de-yakuza-like-a-dragon-para-ps4-xbox-one-pc-ps5-y-xbox-series-x">IGN</a>
+      </article>
+      <!--
+        En esta parte introduzco un formulario que forma parte del aside para que los
+        usuarios puedan enviar analisis del juego
+      -->
+      <article>
+        <h2 class = "efecto3d">Envianos tu opinion sobre el juego</h2>
+        <form action="jdiego@birt.eus" method="post">
+          <div class="alineacion"> 
+            <label  for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" value="Introduce el nombre">
+          </div> 
+          <div class="alineacion">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" value="Introduce el email">
+          </div>
+            <label for="texto">Opinion sobre el juego</label>
+            <textarea name="Opinion" id="texto" cols="30" rows="20">Escribe aquí tu opinion sobre el juego</textarea>
+            <input type="submit" value="Enviar">
+        </form>
+      </article>
+    </aside>
+  </main> 
+  <!--defino unos botones para poder salir de esta pagina o ir a la parte superior de la misma--> 
+  <div class="botones-salir">
+    <a class="boton" href="index.html">Inicio</a>
+    <a class="boton" href="#superior">subir</a>
+  </div>
+</body>
+</html>
