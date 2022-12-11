@@ -1,45 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
+        <channel>
+        <!-- defino características del canal-->
         <title>Casa Gamer</title>
         <link>https://txus77.github.io/practicas_web/</link>
         <description>Weblog de analisis de videojuegos</description>
-        <atom:link href="https://txus77.github.io/practicas_web/docrss.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://txus77.github.io/practicas_web/docrss.xml" rel="self" type="application/rss+xml" />
         <language>es</language>
         <copyright>Copyright 2022</copyright>
         <lastBuildDate>Sun, 11 Dec 2022 09:00:00 +0100</lastBuildDate>
+        <!-- En cada Item indico las noticias que quiero compartir que en este caso he cojido de otras web-->
         <item>
-            <title>Fiel a sus raíces, Capcom llevará Street Fighter 6 a las arcades</title>
+            <title>Ficha videojuego Fallout 3</title>
+            <description>Analisis del videojuego Fallout3</description>
             <author>jdiego@birt.eus</author>
-            <description>
-                Noticia sobre el lanzamiento del videojuego Street Fighter 6 que será llevado a las máquina arcade
-            </description>
-            <link>https://www.levelup.com/noticias/714591/Fiel-a-sus-raices-Capcom-llevara-Street-Fighter-6-a-las-arcades</link>
-            <guid isPermaLink="true">https://www.levelup.com/noticias/714591/Fiel-a-sus-raices-Capcom-llevara-Street-Fighter-6-a-las-arcades</guid>
+            <link>https://txus77.github.io/practicas_web/juego</link>
+            <guid isPermaLink="true">https://txus77.github.io/practicas_web/juego</guid>
             <category>videojuegos</category>
-            <pubDate>Sun, 11 Dec 2022 02:00:00 +0100</pubDate>
+            <pubdate>Sun, 11 Dec 2022 02:00:00 +0100</pubdate>
         </item>
         <item>
-            <title>Durangoko Azoka acerca videojuegos de creadores vascos</title>
+            <title>Ficha videojuego Yakuza Like a Dragon</title>
+            <description>Analisis del videojuego Yakuza Like a Dragon</description>
             <author>jdiego@birt.eus</author>
-            <description>
-                Creadores de videojuegos vascos en el Durangoko Azoka
-            </description>
-            <link>https://www.noticiasdegipuzkoa.eus/cultura/2022/12/10/durangoko-azoka-acerca-videojuegos-creadores-6288020.html</link>
-            <guid isPermaLink="true">https://www.noticiasdegipuzkoa.eus/cultura/2022/12/10/durangoko-azoka-acerca-videojuegos-creadores-6288020.html</guid>
+            <link>https://txus77.github.io/practicas_web/juego1</link>
+            <guid isPermaLink="true">https://txus77.github.io/practicas_web/juego1</guid>
             <category>videojuegos</category>
-            <pubDate>Sat, 10 Dec 2022 10:44:00 +0100</pubDate>
+            <pubdate>Sat, 10 Dec 2022 10:44:00 +0100</pubdate>
         </item>
         <item>
-            <title>Elden Ring es el mejor juego del año en The Game Awards 2022 con God of War Ragnarök como el más premiado</title>
+            <title>Ficha videojuego Yakuza Dying Light</title>
+            <description>Analisis del videojuego Dying Light</description>
             <author>jdiego@birt.eus</author>
-            <description>
-                La eleccion de mejor videojuego del año ha recaido en Elden Ring
-            </description>
-            <link>https://www.vidaextra.com/listas/elden-ring-mejor-juego-ano-the-game-awards-2022-god-of-war-ragnarok-como-premiado</link>
-            <guid isPermaLink="true">https://www.vidaextra.com/listas/elden-ring-mejor-juego-ano-the-game-awards-2022-god-of-war-ragnarok-como-premiado</guid>
+            <link>https://txus77.github.io/practicas_web/juego2</link>
+            <guid isPermaLink="true">https://txus77.github.io/practicas_web/juego2</guid>
             <category>videojuegos</category>
-            <pubDate>Fri, 9 Dec 2022 10:00:00 +0100</pubDate>
+            <pubdate>Fri, 9 Dec 2022 10:00:00 +0100</pubdate>
         </item>
     </channel>
 </rss>
